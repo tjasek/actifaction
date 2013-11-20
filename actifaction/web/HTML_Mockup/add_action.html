@@ -1,0 +1,43 @@
+<head> 
+	<option value="http://actifaction.si/events">Events</option>
+	<option value="http://actifaction.si/main_page">Dashboard</option>
+
+<form method="get" action="http://www.actifaction.si/search.php">
+<table cellpadding="0px" cellspacing="0px">
+<tr>
+<td style="border-style:solid none solid solid;border-color:#000000;border-width:1px;">
+<input type="text" name="zoom_query" style="width:100px; border:0px solid; height:17px; padding:0px 3px; position:relative;">
+</td>
+<td style="border-style:solid;border-color:#000000;border-width:1px;">
+<input type="submit" value="" style="border-style: none; background: url('image.gif') no-repeat; width: 24px; height: 20px;">
+</td>
+</tr>
+</table>
+</form> 
+
+<form action="http://actifaction.si/action">
+    <input type="submit" value="Dodaj akcijo">
+</form>
+
+</head>
+
+<h1> Tukaj dodaj novo akcijo: </h1>
+
+<h2>
+	<form>
+		Ime dogodka: <input type="text" name="event_name" placeholder="Ime tvojega dogodka"><br>
+		Kraj: <input type="text" name="location" placeholder="Kje bo dogodek"><br>
+		Čas: <input type="datetime" name="time"><br>
+		Tip: <form action=""><br>
+			<select type="tip">
+				<option value="Šport">Šport</option>
+				<option value="Mesto">Mesto</option>
+				<option value="Hobi">Hobi</option>
+			</select>
+			</form>
+		Max. število udeležencev: <input type="number" name="max_attendees"<br>
+		Opis: <textarea rows="10" cols="30" name="desc">
+
+		<form action ="input" action="html_form_action.asp" method="post">
+<input type="submit" value="Submit"> + pošlji v bazo?
+</form> 
