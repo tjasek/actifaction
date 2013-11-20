@@ -1,0 +1,15 @@
+<h1> {{ akcija.name }} </h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<h2> Kraj: {{ akcija.location }} <br>
+	Čas : {{ akcija.time }} <br>
+	Tip: {{ akcija.tip }} <br>
+	Max. število udeležencev: {{ akcija.max_attendees }} <br>
+	Opis: {{ akcija.desc }} <br>
+
+	Udeleženci: {{ users.pressed_prijavise_pics}}
+
+<form action ="input" action="html_form_action.asp" method="post">
+<input type="submit" value="Prijavi se"> or..join if user.creator
+
+</h2>
