@@ -1,0 +1,52 @@
+<head> 
+	<option value="http://actifaction.si/events">Events</option>
+	<option value="http://actifaction.si/main_page">Dashboard</option>
+
+<form method="get" action="http://www.actifaction.si/search.php">
+<table cellpadding="0px" cellspacing="0px">
+<tr>
+<td style="border-style:solid none solid solid;border-color:#000000;border-width:1px;">
+<input type="text" name="zoom_query" style="width:100px; border:0px solid; height:17px; padding:0px 3px; position:relative;">
+</td>
+<td style="border-style:solid;border-color:#000000;border-width:1px;">
+<input type="submit" value="" style="border-style: none; background: url('image.gif') no-repeat; width: 24px; height: 20px;">
+</td>
+</tr>
+</table>
+</form> 
+
+<form action="http://actifaction.si/action">
+    <input type="submit" value="Dodaj akcijo">
+</form>
+
+</head>
+
+<h1> Hey {{ user.username }} </h1>
+
+<h2> 
+	Some events that are going on this week:
+</h2>
+
+Filter: <form action=""><br>
+			<select type="tip">
+				<option value="Šport">Šport</option>
+				<option value="Mesto">Mesto</option>
+				<option value="Hobi">Hobi</option>
+			</select>
+			</form>
+
+			+filter akcije url
+
+{% if lates_akcija_list %}
+    <ul>
+    {% for akcija in latest_akcija_list %}
+        <li><a href="{% url 'akcija:view_action' akcija.id %}">{{ akcija.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No actions are created.</p>
+{% endif %}
+
+
+
+
